@@ -1,0 +1,32 @@
+<!doctype html><html lang="de"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes"><meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><meta name="apple-mobile-web-app-title" content="LeanLift">
+<meta name="theme-color" content="#0d1117"><link rel="manifest" href="manifest.webmanifest"><link rel="apple-touch-icon" href="icon-180.png">
+<title>LeanLift</title>
+<style>
+:root{--bg:#0d1117;--card:#161b22;--c2:#21262d;--g:#22c55e;--g2:#4ade80;--t:#e6edf3;--m:#8b949e}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+body{margin:0;background:var(--bg);color:var(--t);font:15px -apple-system,system-ui,sans-serif;padding:calc(env(safe-area-inset-top) + 8px) 14px calc(env(safe-area-inset-bottom) + 84px)}
+h1{font-size:24px;margin:6px 0 12px}h2{font-size:16px;margin:0 0 8px}
+.card{background:var(--card);border-radius:16px;padding:14px;margin-bottom:12px}
+.row{display:flex;gap:8px;align-items:center}.sb{justify-content:space-between}.m{color:var(--m);font-size:13px}
+button{background:var(--g);color:#04130a;border:0;border-radius:12px;padding:10px 14px;font-weight:700;font-size:14px}
+button.s{background:var(--c2);color:var(--t)}button.x{background:none;color:var(--m);padding:4px 8px}
+input,select,textarea{width:100%;background:var(--c2);color:var(--t);border:1px solid #30363d;border-radius:10px;padding:10px;font-size:16px}
+.bar{height:8px;background:var(--c2);border-radius:4px;overflow:hidden;margin:4px 0 8px}.bar i{display:block;height:100%;background:var(--g)}
+nav{position:fixed;left:0;right:0;bottom:0;background:#0d1117ee;backdrop-filter:blur(10px);border-top:1px solid #21262d;display:flex;padding:6px 0 calc(env(safe-area-inset-bottom) + 6px)}
+nav a{flex:1;text-align:center;color:var(--m);font-size:11px;text-decoration:none}nav a b{display:block;font-size:22px}nav a.on{color:var(--g2)}
+.ring{width:130px;height:130px}.big{font-size:28px;font-weight:800}
+.item{display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px solid #21262d}
+.pill{background:var(--c2);border-radius:20px;padding:4px 10px;font-size:12px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+#modal{position:fixed;inset:0;background:#000c;display:none;z-index:9;padding:calc(env(safe-area-inset-top) + 20px) 14px 20px;overflow:auto}
+#timer{position:fixed;left:14px;right:14px;bottom:calc(env(safe-area-inset-bottom) + 74px);display:none;z-index:5}
+video{width:100%;border-radius:12px}img.ph{width:31%;border-radius:10px;aspect-ratio:3/4;object-fit:cover}
+</style></head><body>
+<div id="app"></div><div id="timer" class="card row sb" style="border:1px solid var(--g)"><span>⏱ Pause: <b id="tt"></b></span><span><button class="s" onclick="addT(30)">+30s</button> <button class="s" onclick="stopT()">Stop</button></span></div>
+<div id="modal"><div class="card" id="mb"></div></div>
+<nav id="nav"></nav>
+<script src="zxing.min.js"></script>
+<script src="app.js"></script></body></html>
